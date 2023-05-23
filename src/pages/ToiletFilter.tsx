@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const ToiletFilter = () => {
   return (
     <>
+    ToiletFilter
     </>
   );
 }
