@@ -53,7 +53,7 @@ body{
   margin: 0 auto;
   padding: 20px;
   line-height: 1.5;
-  background-color: #fffbf8;
+  background-color: #ffffff;
 }
 a{
   text-decoration: none;
