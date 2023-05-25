@@ -50,8 +50,6 @@ body{
   width: 100%;
   min-width: 370px;
   max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
   line-height: 1.5;
   background-color: #ffffff;
 }
