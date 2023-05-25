@@ -33,7 +33,7 @@ const Title = styled.div`
   margin: 10px;
   font-weight: bold;
   font-size: 46px;
-  color: black;
+  color: var(--black);
 `;
 
 const SubTitle = styled.div`
@@ -47,7 +47,7 @@ const Button = styled(Link)`
   font-weight: bold;
   font-size: 15px;
   color: white;
-  background-color: var(--star-indicator);
+  background-color: var(--primary);
   border-radius: 30px;
   border: none;
   outline: none;
