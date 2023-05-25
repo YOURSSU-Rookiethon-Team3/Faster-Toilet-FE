@@ -1,10 +1,12 @@
 :root {
-  --primary: #2466A1;
-  --sub-text: #3A3D40;
-  --dark-gray: #505050;
-  --status-active: #0064BF;
-  --status-inactive: #7E7E7E;
-  --text-highlight: #005EB4;
-  --star-indicator: #1650A7;
-  --star-result: #EB5151;
+  --primary : #1650A7;
+  --text-default : #000000;
+  --highlight : #2B4CBF;
+  --sub-text : #3A3D40;
+  --info-icon : #2D4568;
+  --status-active : #0064BF;
+  --status-inactive : #7E7E7E; 
+  --star-active : #EB5151; 
+  --star-inactive : #969696;
+  --basic-button : #5A5A5A;
 }
