@@ -21,7 +21,7 @@ const BuildingCard = ({ name, rating, toiletCnt, top, left }: CardProps) => {
         <img src={ToiletIcon} alt="toilet-icon" style={{ width: "15px" }} />
         {toiletCnt}개
       </SubTitle>
-      <Button to="result/:buildingId">이동하기</Button>
+      <Button to="/result/:buildingId">이동하기</Button>
     </CardContainer>
   );
 }
