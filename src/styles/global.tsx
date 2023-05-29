@@ -46,6 +46,7 @@ table {
 }
 
 body{
+	margin: 0 auto;
   font-family: 'Noto Sans KR';
   width: 100%;
   min-width: 370px;
