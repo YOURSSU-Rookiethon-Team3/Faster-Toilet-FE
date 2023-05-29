@@ -36,12 +36,7 @@ const RangeSlider = styled.input<{ selectedValue: number }>`
     selectedValue === 100 ? 'linear-gradient(to right, var(--status-active) 0%, var(--status-active) 100%, var(--status-inactive) 100%)' :
     'var(--status-inactive)'};
   outline: none;
-  opacity: 0.7;
   transition: opacity 0.2s;
-
-  &:hover {
-    opacity: 1;
-  }
 
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -59,7 +54,7 @@ const RangeSlider = styled.input<{ selectedValue: number }>`
     height: 16px;
     border: none;
     border-radius: 50%;
-    background: #4c8bf5;
+    background: var(--status-active);
     cursor: pointer;
   }
 `;
