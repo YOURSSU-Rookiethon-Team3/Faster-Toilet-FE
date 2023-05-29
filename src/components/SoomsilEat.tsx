@@ -12,7 +12,7 @@ const SoomsilEat = () => {
         </HighlightText><br />
         <Button href="https://eat.soomsil.de/">{`자세히 보기 >`}</Button>
       </Text>
-      <img src={SoomsilImg} alt="soomsil-best" style={{ width: "35vw" }} />
+      <img src={SoomsilImg} alt="soomsil-best" style={{ width: "130px" }} />
     </Container>
   );
 }
@@ -33,7 +33,7 @@ const Text = styled.div`
   color: var(--text-default);
   font-size: 12px;
   font-weight: medium;
-  margin-left: 3vw;
+  margin-left: 20px;
 `;
 
 const HighlightText = styled.span`
