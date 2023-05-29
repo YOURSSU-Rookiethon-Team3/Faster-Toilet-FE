@@ -4,11 +4,11 @@ import StarIcon from '../assets/blue-star-token.png';
 import ToiletIcon from '../assets/toilet-token.png';
 
 interface CardProps {
-  name: string,
-  rating: number,
-  toiletCnt: number,
-  top?: string,
-  left?: string,
+  name: string;
+  rating: number;
+  toiletCnt: number;
+  top?: string;
+  left?: string;
 }
 
 const BuildingCard = ({ name, rating, toiletCnt, top, left }: CardProps) => {
@@ -16,9 +16,9 @@ const BuildingCard = ({ name, rating, toiletCnt, top, left }: CardProps) => {
     <CardContainer top={top} left={left}>
       <Title>{name}</Title>
       <SubTitle>
-        <img src={StarIcon} alt="star-icon" style={{ width: "12px" }} />
+        <img src={StarIcon} alt="star-icon" style={{ width: '12px' }} />
         {rating} / 
-        <img src={ToiletIcon} alt="toilet-icon" style={{ width: "15px" }} />
+        <img src={ToiletIcon} alt="toilet-icon" style={{ width: '15px' }} />
         {toiletCnt}개
       </SubTitle>
       <Button to="/result/:buildingId">이동하기</Button>
@@ -28,7 +28,7 @@ const BuildingCard = ({ name, rating, toiletCnt, top, left }: CardProps) => {
 
 export default BuildingCard;
 
-const CardContainer = styled.div<{ top?: string, left?: string }>`
+const CardContainer = styled.div<{ top?: string; left?: string }>`
   position: absolute;
   width: 145px;
   height: 95px;
@@ -39,9 +39,11 @@ const CardContainer = styled.div<{ top?: string, left?: string }>`
   align-items: center;
   border-radius: 12px;
   border: 1px solid #394D6A;
-  background-color: rgba(255,255,255,0.8);
-  top: ${(props) => props.top || '0'};
-  left: ${(props) => props.left || '0'};
+  background-color: rgba(255, 255, 255, 0.8);
+  top: ${({ top }) => top || '0'};
+  left: ${({ left }) => left || '0'};
+  top: ${({ top }) => top};
+  left: ${({ left }) => left};
 `;
 
 const Title = styled.div`
