@@ -50,7 +50,7 @@ body{
   font-family: 'Noto Sans KR';
   width: 100%;
   min-width: 370px;
-  max-width: 400px;
+  max-width: 420px;
   line-height: 1.5;
   background-color: #ffffff;
 }
