@@ -2,17 +2,43 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import LandingLogo from '../assets/poo.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { postVisitor, getVisitor } from '../apis';
 
 const Home = () => {
-  // TODO : 방문자 수 데이터 받아오기
-  const [visitor, setVisitor] = useState(1932);
+  const [visitorsCount, setVisitorsCount] = useState<number>(0);
+
+  useEffect(() => {
+    const incrementVisitorCount = async () => {
+      try {
+        await postVisitor();
+      } catch (error) {
+        console.error('Error incrementing visitor count: ', error);
+      }
+    };
+
+    incrementVisitorCount();
+  }, []);
+
+  useEffect(() => {
+    const fetchVisitorCount = async () => {
+      try {
+        const { visitorsCount } = await getVisitor();
+        setVisitorsCount(visitorsCount);
+      } catch (error) {
+        console.error('Error fetching visitor count: ', error);
+      }
+    };
+
+    fetchVisitorCount();
+  }, []);
+
   return (
     <>
     <Container>
       <img src={LandingLogo} alt="landing-logo" style={{ width: "71px" }} />
       <Title>급할때</Title>
-      <SubTitle>지금까지 {visitor.toLocaleString()}명이 저에게 추천받았어요.</SubTitle>
+      <SubTitle>지금까지 {visitorsCount.toLocaleString()}명이 저에게 추천받았어요.</SubTitle>
       <Button to="/building-list">찾아보기</Button>
     </Container>
     </>
