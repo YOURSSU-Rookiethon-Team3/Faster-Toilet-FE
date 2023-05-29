@@ -58,7 +58,7 @@ const SubTitle = styled.div`
 `;
 
 const MapWrapper = styled.div`
-  width: 100vw;
+  width: 400px;
   height: 70vh;
   background: no-repeat center/110% url(${BackgroundImg});
 `;
